@@ -1,0 +1,111 @@
+@media(max-width:1100px){
+    #mid{
+        height: 800px;
+    }
+    #doctor h2{
+        top: 65%;
+    }
+}
+
+@media(max-width:992px){
+#order-second .flex-box, #order-first .flex-box{
+    flex-basis: 45%;
+}
+.list i{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+}
+@media(max-width:768px){
+    header .nav img{
+        width: 550px;
+    }
+    header .logo img{
+        height: 80px;
+    }
+    #mid, #pet-care{
+        height: auto;
+    }
+    #order-first, #order-second{
+        justify-content: center;
+        align-items: center;
+    }
+    #order-second .flex-box, #order-first .flex-box{
+        flex-basis: 45%;
+    }
+    #order-first .flex-box img, #order-second .flex-box img{
+        height: 300px;
+        width: 300px;
+    }
+    #order-first .flex-box h1,#order-second .flex-box h1{
+        margin-top: 50px;
+        font-size: 50px;
+    }
+    #price{
+        height: 1600px;
+    }
+
+    #price .pricine-box{
+        flex-basis: 70%;
+    }
+    #doctor h2{
+        top: 75%;
+    }
+    .footer{
+        margin-left: 50px;
+    }
+    .list{
+        flex-basis: 20%;
+    }
+
+}
+@media(max-width:576px){
+    header .nav img{
+        margin-top: -50px;
+        width: 380px;
+        height: 30px;
+    }
+    header .search img{
+        margin-top: -50px;
+    }
+    header .logo img{
+        height: 80px;
+    }
+    #pet-care .flex-box{
+        display: block;
+    }
+#order-first .flex-box{
+        margin-top: 30px;
+    }
+    #price .flex-box{
+        height: 1300px;
+    }
+    #price{
+        height: 1700px;
+    }
+
+    #price .pricine-box{
+        flex-basis: 90%;
+    }
+    #about{
+        height: auto;
+    }
+    #about .about-box{
+        flex-basis: 90%;
+    }
+    .list{
+        flex-basis: 40%;
+    }
+
+}
+@media(max-width:500px){
+    header .nav img{
+        width: 300px;
+        height: 20px;
+    }
+    header .logo img{
+        height: 70px;
+    }
+}
