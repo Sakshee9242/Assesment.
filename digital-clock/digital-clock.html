@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: aqua;
+    }
+    #Day{
+        height: 70px;
+        line-height: 70px;
+        font-size: 30px;
+        font-weight: 700;
+        border-radius: 10px;
+        border: 5px solid #035252;
+        background-color: #20b2aa;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+        width: 50%;
+        margin: 50px auto 0 auto;
+        text-transform: uppercase;
+        text-align: center;
+        -webkit-text-stroke: 2px #000000;
+    }
+    .Time{
+        position: relative;
+        width: 50%;
+        height: 70px;
+        background: linear-gradient(-40deg, red, blue, green, yellow,red,blue,green, lightgreen,coral,magenta);
+        margin: 10px auto;
+        border-radius: 10px; 
+
+    }
+    .Time .Bf{
+    position: absolute;
+    height:90%;
+    width:98%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    border-radius: 5px;
+
+  }
+    .Time .Af{
+        letter-spacing: 5px;
+      position: absolute;
+      font-size: 50px; 
+      text-align: center;
+      width:100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      background: linear-gradient(-40deg, red, blue, green, yellow,red,blue,green, lightgreen,coral,magenta);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      }
+      
+</style>
+</head>
+         <!-- clock part  -->
+<body onload="Showmetime()">
+    <div class="main">
+        <div id="Day">            
+        </div>
+
+        <div class="Time">
+            <div class="Bf"></div>
+            <div class="Af"></div>
+          </div>
+    </div>
+          
+    <!-- clock part  -->
+</body>
+
+      <!-- script is here  -->
+    <script>
+          // Day-Date function
+  $(function showday(){
+
+function getMonthsName(m){
+  let months_name = ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October','November', 'December'];
+
+  return months_name[m];
+ }
+
+ function getWeekName(Day){
+  let week_name = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+  return week_name[Day];
+ }
+
+
+
+let dt = new Date();
+// Weeks
+let Day = dt.getDay();
+let weekName = getWeekName(Day);
+let m = dt.getMonth();
+let month = getMonthsName(m);
+let d = dt.getDate(); 
+let year = dt.getFullYear();
+
+// 0-9 logic in day date format
+// d = d<10 ? "0"+ d : d;
+
+let Days = weekName  + ","+ " " + month + " " + d + "," + " " + year;
+
+$("#Day").html(Days);
+})
+
+ 
+          // Time  function
+
+  $(function Showmetime(){
+      let dt = new Date();
+    var h = dt.getHours();
+    let m = dt.getMinutes();
+    let s = dt.getSeconds();
+    var session = "PM";
+
+    // 12 hours logic
+    if(h>12){
+      h = h - 12; //(h= h-12 ) h = 13 -12 =1
+    }
+
+    // AM to PM logic/functionality
+    if(h>=12){
+      session ="AM";
+    }
+
+    // // 0-9 clock format logic
+     h = h<10 ? "0"+h : h;
+     m = m<10 ? "0"+m : m;
+     s = s<10 ? "0"+s : s;
+    
+
+    let clock = h  + ":" + m + ":" + s + " " + session;
+
+    $(".Af").html(clock);
+
+    setInterval(Showmetime, 1000);
+  })  
+          
+    </script>
+</html>
