@@ -1,0 +1,73 @@
+form .username i,
+.password i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px !important;
+}
+
+body {
+    background: #dde1e7;
+}
+
+form {
+    box-shadow: 3px 2px 3px 0 #5e687949,
+        -3px -2px 3px 0 #ffffff73;
+}
+
+form .top-icon i {
+    color: white;
+    margin: 5px;
+    text-align: center;
+   
+}
+
+a {
+    text-decoration: none;
+}
+
+form .top-icon span {
+    background-color: #1DA1F2;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 3px 2px 3px 0 #5e687949,
+        -3px -2px 3px 0 #ffffff73;
+    
+}
+
+form input {
+    height: 40px;
+    padding: 10px 40px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    width: 100%;
+    background: #dde1e7;
+    box-shadow: inset 3px 2px 3px 0 #c4c4c4,
+        inset -3px 2px 5px 0 #f3f3f3;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1DA1F2;
+    border-radius: 50px;
+    width: 100%;
+    border: none !important;
+    padding: 8px 0;
+    color: white;
+    font-size: 12px;
+    box-shadow: inset 3px 2px 3px 0 #1DA1F2,
+        inset -3px 2px 5px 0  #7fffd4;
+}
+.fa-eye{
+    left: 88% !important;
+}
