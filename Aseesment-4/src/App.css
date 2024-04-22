@@ -1,0 +1,19 @@
+*{
+  user-select: none;
+}
+.App {
+  text-align: center;
+}
+.form{
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+label{
+  margin-bottom: 6px;
+}
+.button{
+  margin-top: 31px !important;
+}
+
+
+
+
